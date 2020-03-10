@@ -1,5 +1,4 @@
 import QwixxModel from '../QwixxModel.js'
-import { exportAllDeclaration } from 'babel-types';
 
 describe("QwixxModel", () => {
     describe(".rollDie", () => {
