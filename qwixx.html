@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <style>
+        .numberBox {
+            display: inline-block;
+            width: 25px;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin: 5px;
+            background-color: lightgrey;
+        }
+        
+        #board {
+            background-color: lightgray;
+            width: 225px;
+        }
+        
+        .red {
+            background-color: red;
+        }
+        
+        .yellow {
+            background-color: yellow;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        
+        .blue {
+            background-color: blue;
+        }
+        
+        .white {
+            background-color: white;
+        }
+        
+        .row {
+            border-radius: 5px;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .die {
+            display: inline-block;
+            width: 20px;
+            border: 1px solid black;
+            border-radius: 7px;
+            text-align: center;
+            margin: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Qwixx Starter</h1>
+
+    <div id='board'>
+        <div>
+            <div class='row red'>
+                <span class='numberBox'>2</span>
+                <span class='numberBox'>3</span>
+                <span class='numberBox'>4</span>
+                <span class='numberBox'>5</span>
+                <span class='numberBox'>6</span>
+            </div>
+        </div>
+        <div>
+            <div class='row yellow'>
+                <span class='numberBox'>2</span>
+                <span class='numberBox'>3</span>
+                <span class='numberBox'>4</span>
+                <span class='numberBox'>5</span>
+                <span class='numberBox'>6</span>
+            </div>
+        </div>
+
+        <div>
+            <div class='row green'>
+                <span class='numberBox'>6</span>
+                <span class='numberBox'>5</span>
+                <span class='numberBox'>4</span>
+                <span class='numberBox'>3</span>
+                <span class='numberBox'>2</span>
+            </div>
+        </div>
+
+        <div>
+            <div class='row blue'>
+                <span class='numberBox'>6</span>
+                <span class='numberBox'>5</span>
+                <span class='numberBox'>4</span>
+                <span class='numberBox'>3</span>
+                <span class='numberBox'>2</span>
+            </div>
+        </div>
+
+        <div>
+            <span class='die white' id='die-w0'>x</span>
+            <span class='die white' id='die-w1'>x</span>
+            <span class='die red' id='die-0'>x</span>
+            <span class='die yellow' id='die-1'>x</span>
+            <span class='die green' id='die-2'>x</span>
+            <span class='die blue' id='die-3'>x</span>
+        </div>
+        <div>
+            <button id='roll'>Roll</button>
+        </div>
+    </div>
+
+    <script type="module" src='Qwixx.js'></script>
+
+</body>
+
+</html>
