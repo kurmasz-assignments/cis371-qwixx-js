@@ -10,6 +10,21 @@ export default class QwixxView {
         document.getElementById('roll').addEventListener('click', callback);
     }
 
+    onNumberButtonClicked(callback) {
+        let numberBoxes = document.getElementsByClassName('numberBox');
+        for (let i = 0; i < numberBoxes.length; ++i) {
+            numberBoxes[i].addEventListener('click', (event) => {
+                let regex = /box-(\d+)-(\d+)/
+
+                // In the video, I used "event.target"; but, using numberBoxes[i]
+                // is a better approach because it will work even if you have elements
+                // nested inside your number boxes.
+                let [, row, column] = numberBoxes[i].id.match(regex);;
+                callback(row, column);
+            });
+        }
+    }
+
     // Update the board according to the current state of the model.
     // IMPORTANT:  The View should not modify the model.  All accesses
     // to the model should be read only.
