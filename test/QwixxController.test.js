@@ -14,7 +14,7 @@ describe("QwixxController", () => {
 
         view = {
             onRollButtonClicked: jest.fn(),
-	    onNumberButtonClicked: jest.fn(),
+            onNumberButtonClicked: jest.fn(),
             update: jest.fn()
         };
 

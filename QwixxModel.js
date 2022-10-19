@@ -1,5 +1,11 @@
 export default class QwixxModel {
 
+    #numRows
+    #maxColumn
+    #wdice
+    #dice
+
+
     constructor(numRows, maxColumn) {
         this.#numRows = numRows;
         this.#maxColumn = maxColumn;

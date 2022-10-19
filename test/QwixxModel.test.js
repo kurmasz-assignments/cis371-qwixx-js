@@ -35,8 +35,8 @@ describe("QwixxModel", () => {
             // Verify that the values returned by rollDie end up 
             // in the wdice and dice arrays
             model.rollDice();
-            expect(model.wdice).toEqual([8, 6]);
-            expect(model.dice).toEqual([7, 5, 3, 0]);
+            expect(model.getWhiteDice()).toEqual([8, 6]);
+            expect(model.getColoredDice()).toEqual([7, 5, 3, 0]);
         });
     });
 });
