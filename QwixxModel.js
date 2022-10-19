@@ -1,11 +1,11 @@
 export default class QwixxModel {
 
     constructor(numRows, maxColumn) {
-        this.numRows = numRows;
-        this.maxColumn = maxColumn;
+        this.#numRows = numRows;
+        this.#maxColumn = maxColumn;
 
-        this.wdice = [1, 2];
-        this.dice = [3, 4, 5, 6];
+        this.#wdice = [1, 2];
+        this.#dice = [3, 4, 5, 6];
     }
 
     // return a random integer in the range [1, 6]
@@ -14,7 +14,21 @@ export default class QwixxModel {
     }
 
     rollDice() {
-        this.wdice = this.wdice.map(() => QwixxModel.rollDie());
-        this.dice = this.dice.map(() => QwixxModel.rollDie());
+        this.#wdice = this.#wdice.map(() => QwixxModel.rollDie());
+        this.#dice = this.#dice.map(() => QwixxModel.rollDie());
     }
+
+    getWhiteDice() {
+        // By cloning the private wdice array, we can help
+        // ensure that the model doesn't accidentally modify 
+        // the internal state.
+        return Array.from(this.#wdice);        
+    }
+
+    getColoredDice() {
+        return Array.from(this.#dice);
+    }
+
+
+
 }

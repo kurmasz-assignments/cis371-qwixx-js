@@ -29,11 +29,11 @@ export default class QwixxView {
     // IMPORTANT:  The View should not modify the model.  All accesses
     // to the model should be read only.
     update(model) {
-            model.wdice.forEach((die, index) => {
+            model.getWhiteDice().forEach((die, index) => {
                 document.getElementById(`die-w${index}`).innerHTML = die;
             })
 
-            model.dice.forEach((die, index) => {
+            model.getColoredDice().forEach((die, index) => {
                 document.getElementById(`die-${index}`).innerHTML = die;
             });
         } // end update
